@@ -2,11 +2,6 @@ import { useId, useState } from "react";
 
 const LOCATIONS = ["Kenya", "Ethiopia", "Rwanda", "Ghana", "Israel"];
 
-/**
- * Reusable coffee product form used for both "Add" and "Edit".
- * - useState: controlled inputs.
- * - useId: unique ids tying each <label> to its field.
- */
 function ProductForm({
   initialValues = {
     name: "",
