@@ -21,6 +21,13 @@ function Shop() {
     );
   }
 
+  function clearFilters() {
+    setSearch("");
+    setSelectedLocations([]);
+  }
+
+  const hasActiveFilters = search !== "" || selectedLocations.length > 0;
+
   const filtered = products.filter((p) => {
     const matchesSearch = p.name
       .toLowerCase()
@@ -49,6 +56,16 @@ function Shop() {
             </label>
           ))}
         </div>
+
+        {hasActiveFilters && (
+          <button
+            type="button"
+            className="location-filter__clear"
+            onClick={clearFilters}
+          >
+            Clear filters
+          </button>
+        )}
       </aside>
 
       <div className="shop__main">
