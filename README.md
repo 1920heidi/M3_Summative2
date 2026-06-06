@@ -23,13 +23,12 @@ npm install
 You need **two terminals** running at the same time:
 
 ```bash
-# Terminal 1 — backend API (http://localhost:3000)
+#backend API (http://localhost:3000)
 npm run server
 
-# Terminal 2 — frontend dev server (http://localhost:5173)
+#frontend dev server (http://localhost:5173)
 npm run dev
 ```
-
 Then open http://localhost:5173.
 
 > If the page shows "localhost refused to connect", it means a server isn't
