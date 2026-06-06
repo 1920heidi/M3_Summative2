@@ -1,7 +1,12 @@
 // Centralized API layer for the simulated json-server backend.
-// Run the backend with:  npm run server  (json-server on port 3000)
-
-export const API_URL = "http://localhost:3000/products";
+// Local dev: run `npm run server` (json-server on port 3000).
+// Deployed (GitHub Pages): json-server can't run there, so fall back to
+// my-json-server, which serves this repo's db.json as a live API.
+// Note: on the deployed site, writes (POST/PATCH/DELETE) appear to succeed but
+// are not persisted — they reset on reload.
+export const API_URL = import.meta.env.PROD
+  ? "https://my-json-server.typicode.com/1920heidi/M3_Summative2/products"
+  : "http://localhost:3000/products";
 
 async function handle(response) {
   if (!response.ok) {
