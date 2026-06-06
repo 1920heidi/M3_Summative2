@@ -1,4 +1,4 @@
-# Heidi's Coffee Shop — Admin Portal
+# Heidi's Coffee Shop
 
 A single-page React application for the **Heidi's Coffee Shop** store that lets an
 administrator manage the coffee catalogue: browse coffees, add new ones, edit
@@ -23,13 +23,12 @@ npm install
 You need **two terminals** running at the same time:
 
 ```bash
-# Terminal 1 — backend API (http://localhost:3000)
+#backend API (http://localhost:3000)
 npm run server
 
-# Terminal 2 — frontend dev server (http://localhost:5173)
+#frontend dev server (http://localhost:5173)
 npm run dev
 ```
-
 Then open http://localhost:5173.
 
 > If the page shows "localhost refused to connect", it means a server isn't
@@ -37,14 +36,16 @@ Then open http://localhost:5173.
 
 ## Available scripts
 
-| Script              | Description                                    |
-| ------------------- | ---------------------------------------------- |
-| `npm run dev`       | Start the Vite dev server                      |
-| `npm run server`    | Start json-server on port 3000 (`db.json`)     |
-| `npm run build`     | Production build                               |
-| `npm run test`      | Run the test suite once                        |
-| `npm run test:watch`| Run tests in watch mode                        |
-| `npm run lint`      | Lint the project                               |
+| Script               Description                                   |
+| ------------------- ---------------------------------------------- |
+| `npm run dev`       Start the Vite dev server                      |
+| `npm run server`    Start json-server on port 3000 (`db.json`)     |
+| `npm run build`     Production build (outputs to `dist/`)          |
+| `npm run preview`   Preview the production build locally           |
+| `npm run deploy`    Build and publish to GitHub Pages              |
+| `npm run test`      Run the test suite once                        |
+| `npm run test:watch`Run tests in watch mode                        |
+| `npm run lint`      Lint the project                               |
 
 ## Routes
 
@@ -95,3 +96,13 @@ npm run test
 
 19 tests across 6 suites cover the search bar, product form (incl. validation),
 product card actions, both custom hooks, the full CRUD flow, and routing/navigation.
+
+## Deployed Project
+https://1920heidi.github.io/M3_Summative2/
+
+```bash
+npm run deploy
+```
+This builds the app and publishes the `dist/` folder to the `gh-pages` branch.
+
+
