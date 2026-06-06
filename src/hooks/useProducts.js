@@ -13,15 +13,26 @@ export function useProducts() {
 
   // READ — load all products. State updates happen only in the async
   // callbacks, so this is safe to call from an effect on mount.
-  const loadProducts = useCallback(() => {
+  // The deployed API (my-json-server) can be slow/fail on the first request
+  // after it has been idle, so retry a few times before showing an error.
+  const loadProducts = useCallback((attempt = 1) => {
+    const MAX_ATTEMPTS = 4;
     return api
       .getProducts()
       .then((data) => {
         setProducts(data);
         setError(null);
+        setLoading(false);
       })
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
+      .catch((err) => {
+        if (attempt < MAX_ATTEMPTS) {
+          // Wait a little longer each time, then try again.
+          return new Promise((resolve) => setTimeout(resolve, attempt * 800))
+            .then(() => loadProducts(attempt + 1));
+        }
+        setError(err.message);
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
