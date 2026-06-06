@@ -104,7 +104,9 @@ npm run test
 product card actions, both custom hooks, the full CRUD flow, and routing/navigation.
 
 ## Deployed Project
-https://1920heidi.github.io/M3_Summative2/
+https://1920heidi.github.io/M3_Summative2/ 
+
+NOTE: YOU MAY HAVE TO HARD REFRESH IF THE BACKEND DOESN'T LOAD PRESS (command + shift + R)
 
 ```bash
 npm run deploy
