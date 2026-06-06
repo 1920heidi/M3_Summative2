@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Highland Roast",
+      "description": "Smooth medium roast with a chocolatey finish.",
+      "origin": "Ethiopia",
+      "price": 1200,
+      "location": "Ethiopia"
+    },
+    {
+      "id": "2",
+      "name": "Morning Bold",
+      "description": "Strong, full-bodied dark roast to start your day.",
+      "origin": "Colombia",
+      "price": 1400,
+      "location": "Ghana"
+    },
+    {
+      "id": "3",
+      "name": "Velvet Decaf",
+      "description": "All the flavour, none of the caffeine.",
+      "origin": "Brazil",
+      "price": 1100,
+      "location": "Rwanda"
+    },
+    {
+      "id": "4",
+      "name": "Citrus Light",
+      "description": "Bright, fruity light roast with citrus notes.",
+      "origin": "Kenya",
+      "price": 1500,
+      "location": "Ghana"
+    },
+    {
+      "id": "5",
+      "name": "Espresso Reserve",
+      "description": "Rich crema, perfect for espresso machines.",
+      "origin": "Guatemala",
+      "price": 1650,
+      "location": "Israel"
+    },
+    {
+      "id": "6",
+      "name": "Hazel Cream",
+      "description": "Nutty hazelnut blend, mellow and sweet.",
+      "origin": "Honduras",
+      "price": 1300,
+      "location": "Kenya"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

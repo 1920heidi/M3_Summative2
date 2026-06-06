@@ -1,0 +1,70 @@
+:root {
+  /* Soft pink theme (the original pink) */
+  --bg: #ffeaf1;                       /* soft pink fallback */
+  --panel: #fff4f7;                    /* cards / form panels (solid) */
+  --sidebar: #f8dde6;                  /* shop sidebar (solid) */
+  --hero: rgba(45, 28, 36, 0.55);      /* hero: darker overlay for readable text */
+  --text: #5a3d4a;                     /* body text */
+  --text-h: #3b2530;                   /* headings */
+  --muted: #8a6b76;
+  --border: #f3d3de;
+  --accent: #d76a8e;                   /* rose pink accent */
+  --accent-2: #c2547a;
+  --danger: #b3382b;
+  --shadow: rgba(120, 50, 70, 0.18) 0 6px 16px -4px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font: 17px/1.5 var(--sans);
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* Coffee photo background with a soft pink wash so it stays visible */
+  background:
+    linear-gradient(rgba(255, 234, 241, 0.5), rgba(255, 234, 241, 0.5)),
+    url("./assets/Coffee_project.png") center / cover no-repeat fixed;
+  min-height: 100svh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-h);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
