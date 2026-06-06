@@ -37,13 +37,21 @@ Then open http://localhost:5173.
 ## Available scripts
 
 `npm run dev` - Start the Vite dev server
+
 `npm run server`- Start json-server on port 3000 (`db.json`)
+
 `npm run build` - Production build (outputs to `dist/`)
+
 `npm run preview` - Preview the production build locally
+
 `npm run deploy` - Build and publish to GitHub Pages
+
 `npm run test` - Run the test suite once
+
 `npm run test:watch` - Run tests in watch mode
+
 `npm run lint` - Lint the project
+
 
 ## Routes
 
